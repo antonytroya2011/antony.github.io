@@ -5,57 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1> Hello World</h1>
-    <br> 
-    <form action="" id="crud form">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre">
-        <label for="edad">Edad</label>
-        <input type="number" id="edad">
-        <button type="button" onclick="crearRegistro()">Crear</button>
-    </form>
+    <body>
+        <h1> Hello World</h1>
+        <br> 
+        <form action="" id="crud form">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad">
+            <button type="button" onclick="crearRegistro()">Crear</button>
+        </form>
 
 
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
-        import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyDDiEZK38IT1kbRMudw5xrCXfNvvHaJzkQ",
-          authDomain: "programa-db163.firebaseapp.com",
-          databaseURL: "https://programa-db163-default-rtdb.firebaseio.com",
-          projectId: "programa-db163",
-          storageBucket: "programa-db163.appspot.com",
-          messagingSenderId: "110010089612",
-          appId: "1:110010089612:web:a8a47a493c9f766a96fba9"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+            import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+        
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+            apiKey: "AIzaSyDDiEZK38IT1kbRMudw5xrCXfNvvHaJzkQ",
+            authDomain: "programa-db163.firebaseapp.com",
+            databaseURL: "https://programa-db163-default-rtdb.firebaseio.com",
+            projectId: "programa-db163",
+            storageBucket: "programa-db163.appspot.com",
+            messagingSenderId: "110010089612",
+            appId: "1:110010089612:web:a8a47a493c9f766a96fba9"
+            };
+        
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const database = getDatabase(app);
 
-        window.crearRegistro = function () {
-            const nombre = document.getElementById("nombre").value;
-            const edad = document.getElementById("edad").value;
+            window.crearRegistro = function () {
+                const nombre = document.getElementById("nombre").value;
+                const edad = document.getElementById("edad").value;
 
-            console.log(nombre, edad);
-            console.log(database)
+                console.log(nombre, edad);
+                console.log(database)
 
-            push(
-                ref(database, 'septimo'),
-                {
-                    age: edad,
-                    name: name,
-                }
-            );
+                push(
+                    ref(database, 'septimo'),
+                    {
+                        age: edad,
+                        name: name,
+                    }
+                );
 
-        }
-      </script>
+            }
+        </script>
     
-</body>
+    </body>
 </html>
